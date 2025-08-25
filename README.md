@@ -26,7 +26,7 @@ Rode as migrações dentro do Terminal
 python manage.py makemigrations ola_mundo
     python manage.py migrate
 
-    Para executar o sistema é:
+para executar o sistema é:
  python manage.py runserver
 
 processo debug:
