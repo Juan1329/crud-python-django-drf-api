@@ -36,4 +36,4 @@ def create(validated_data):
 
         # Serializa e retorna a resposta correta
         serializer = SaleSerializer(sale)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.data, status=status.HTTP_201_CREATED)
