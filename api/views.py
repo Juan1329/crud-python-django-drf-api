@@ -32,6 +32,7 @@ class ProductsAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+
 class SalesAPIView(APIView):
 
     # Listar venda
@@ -66,6 +67,8 @@ class ProductDetailAPIView(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+    #patch criar
+    
     # Deletar produto
     def delete(self, request, pk):
         product = get_object_or_404(Product, pk=pk)
