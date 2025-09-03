@@ -58,16 +58,14 @@ class ProductDetailAPIView(APIView):
         serializer = ProductSerializer(product)
         return Response(serializer.data)
 
-    # Atualizar produto
-    def put(self, request, pk):
+    # Atualizar produto todo com o campo
+    def patch(self, request, pk):
         product = get_object_or_404(Product, pk=pk)
-        serializer = ProductSerializer(product, data=request.data)
+        serializer = ProductSerializer(product, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    #patch criar
     
     # Deletar produto
     def delete(self, request, pk):

@@ -53,6 +53,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    #interceptador com determinada função/variavel
 ]
 
 ROOT_URLCONF = "system.urls"
@@ -75,7 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "system.wsgi.application"
 
 
-# Database
+# Database chamando variaveis de ambiente que estão alocada no .env
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
